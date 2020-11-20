@@ -22,11 +22,13 @@ We must therefore recover and clean the previously scrapped "ImmoCollect" datase
 After recovering and cleaning the different dataset we were able to compare them.  
 
 #### First dataset "ImmoCollect18"
-   
+
+  
 Input : 18 0000 row  
 Output : 11 000 row  
 
-No missing values !
+No missing values !  
+More info [Here](data-cleaning-IC18.ipynb)
 
 ```
 Prix                    int64
