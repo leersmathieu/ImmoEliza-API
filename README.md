@@ -15,6 +15,17 @@ Since there are two usable raw datasets, we are going to exchange our data with 
 
 We must therefore recover and clean the previously scrapped "ImmoCollect" dataset and compare its values with those of our colleague to then choose the most reliable one for our predictions.
 
+### 2. Prediction model
+
+Using the cleaned data it will be necessary to create a price prediction model based on the relevant features.
+### 3. Making API
+
+I will certainly start from the challenge-flask-api to initialize the API it will only remain to link it to our prediction model.
+
+### 4. Deployment
+
+For the deployment of the API I'm thinking of using a VPS and the docker service to make things easier but azure is still an option.
+
 ## Realisation
 
 ### 1. Data cleaning
