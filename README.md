@@ -33,13 +33,12 @@ For the deployment of the API I'm thinking of using a VPS and the docker service
 After recovering and cleaning the different dataset we were able to compare them.  
 
 #### First dataset "ImmoCollect18"
-
-  
+ 
 Input : 18 0000 row  
 Output : 11 000 row  
 
 No missing values !  
-More info [Here](data-cleaning-IC18.ipynb)
+More info and heatmap BY type of property [Here](data-cleaning-IC18.ipynb)
 
 ```
 Prix                    int64
@@ -55,3 +54,45 @@ Terrasse                 bool
 Heatmap (correlation) 
 
 ![heatmap](./assets/hm1.png "heatmap du dataset ImmoCollect18")
+
+#### Second dataset "ImmoCollect52"
+ 
+Input : 52 0000 row  
+Output : 30 000 row  
+
+No missing values !  
+More info and heatmap BY type of property [Here](data-cleaning-IC52.ipynb)
+
+```
+postal_code                 int64
+type_of_property            int64
+price                       int64
+number_of_rooms             int64
+house_area                  int64
+fully_equipped_kitchen      int64
+terrace                     int64
+garden                      int64
+state_of_the_building       int64
+```
+
+PLUS (extended informations)
+
+```
+longitude                 float64
+latitude                  float64
+locality_km2              float64
+locality                   object
+province                   object
+region                     object
+head_city                  object
+CD_REFNIS                 float64
+living_surface_ha         float64
+population                float64
+pop_per_km2               float64
+total_per_build_km2       float64
+ratio_free_build          float64
+```
+
+Heatmap (correlation) 
+
+![heatmap](./assets/hm2.png "heatmap du dataset ImmoCollect18")
