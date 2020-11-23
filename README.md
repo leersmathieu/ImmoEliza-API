@@ -96,3 +96,9 @@ ratio_free_build          float64
 Heatmap (correlation) 
 
 ![heatmap](./assets/hm2.png "heatmap du dataset ImmoCollect18")
+
+### 2. Prediction model
+
+The first dataset has better correlation while the second has more input and more extended info.
+
+So I'm going to test different models on both datasets in parallel.
