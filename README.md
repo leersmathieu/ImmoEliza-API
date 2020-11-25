@@ -41,14 +41,14 @@ No missing values !
 More info and heatmap BY type of property [Here](data-cleaning-IC18.ipynb)
 
 ```
-Prix                    int64
-Type de propriété       int64
-Bien neuf                bool
-Code Postal             int64
-Surface habitable       int64
-Nombre de chambre(s)    int64
-Jardin                   bool
-Terrasse                 bool
+price                int64
+type_of_property     int64
+is_new                bool
+postal_code          int64
+house_area           int64
+number_of_bedroom    int64
+garden                bool
+terrace               bool
 ```
 
 Heatmap (correlation) 
@@ -58,7 +58,7 @@ Heatmap (correlation)
 #### Second dataset "ImmoCollect52"
  
 Input : 52 0000 row  
-Output : 30 000 row  
+Output : 40 000 row  
 
 No missing values !  
 More info and heatmap BY type of property [Here](data-cleaning-IC52.ipynb)
@@ -67,7 +67,7 @@ More info and heatmap BY type of property [Here](data-cleaning-IC52.ipynb)
 postal_code                 int64
 type_of_property            int64
 price                       int64
-number_of_rooms             int64
+number_of_bedroom           int64
 house_area                  int64
 fully_equipped_kitchen      int64
 terrace                     int64
@@ -78,18 +78,13 @@ state_of_the_building       int64
 PLUS (extended informations)
 
 ```
-longitude                 float64
-latitude                  float64
-locality_km2              float64
 locality                   object
+district                   object
 province                   object
+province_int              float64
 region                     object
-head_city                  object
-CD_REFNIS                 float64
-living_surface_ha         float64
-population                float64
-pop_per_km2               float64
-total_per_build_km2       float64
+region_int                float64
+district_int              float64
 ratio_free_build          float64
 ```
 
