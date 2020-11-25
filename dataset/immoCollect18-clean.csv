@@ -1,4 +1,4 @@
-,Prix,Type de propriété,Bien neuf,Code Postal,Surface habitable,Nombre de chambre(s),Jardin,Terrasse
+,price,type_of_property,is_new,postal_code,house_area,number_of_bedroom,garden,terrace
 0,280000,0,True,1180,65,1,True,True
 1,282500,0,True,1180,73,1,False,True
 2,412500,0,True,1180,100,2,False,True
