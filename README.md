@@ -100,4 +100,12 @@ Heatmap (correlation)
 
 The first dataset has better correlation while the second has more input and more extended info.
 
-So I'm going to test different models on both datasets in parallel.
+__So I'm going to test different models on both datasets in parallel.__
+
+After a lot of testing and an aberrant lack of time, I chose to use only the "model52" for the continuation of the hostilities.
+
+After dividing my dataset in two I get a **score of 63** for house predictions against **score of 74** for apartment predictions using **XGBOOST** algorythme
+
+![score](./assets/score.png "score for apart using xgboost")
+
+It's not perfect, I may have been a bit strong on the removal of the outliers on the houses. I'll have to go over it again.
