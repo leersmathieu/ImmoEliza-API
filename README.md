@@ -4,6 +4,10 @@ API for ImmoEliza Project
 
 Link to the challenge description :  [Here](https://github.com/becodeorg/CRL-Turing-4.22/blob/master/Projects/4.Prediction_api/README.md)
 
+## Result
+
+API : http://tamikara.xyz:5000/  
+App : http://tamikara.xyz/immo-eliza/prediction/
 ## Step to realise
 
 ### 1. Data cleaning
@@ -72,7 +76,7 @@ house_area                  int64
 fully_equipped_kitchen      int64
 terrace                     int64
 garden                      int64
-state_of_the_building       int64
+is_new                      int64
 ```
 
 PLUS (extended informations)
