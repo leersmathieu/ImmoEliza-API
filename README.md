@@ -4,10 +4,23 @@ API for ImmoEliza Project
 
 Link to the challenge description :  [Here](https://github.com/becodeorg/CRL-Turing-4.22/blob/master/Projects/4.Prediction_api/README.md)
 
+## Objective
+This project is a collaboration between BeCode AI and the BeCode Web Dev team.
+
+The AI developers will create an API and the web developers will develop an interface for the client "ImmoEliza".
+
+The main process is about a collaboration between the AI and the web dev so that all have to be in sync in order to know how to construct the form.
+
+- Be able to create a prediction model
+- Be able to deploy model
+- Be able to work in a team
+- Be able to build an api
+
 ## Result
 
 API : http://tamikara.xyz:5000/  
 App : http://tamikara.xyz/immo-eliza/prediction/
+
 ## Step to realise
 
 ### 1. Data cleaning
@@ -100,7 +113,7 @@ Heatmap (correlation)
 
 The first dataset has better correlation while the second has more input and more extended info.
 
-__So I'm going to test different models on both datasets in parallel.__
+_So I'm going to test different models on both datasets in parallel._
 
 After a lot of testing and an aberrant lack of time, I chose to use only the "model52" for the continuation of the hostilities.
 
@@ -109,3 +122,33 @@ After dividing my dataset in two I get a **score of 63** for house predictions a
 ![score](./assets/score.png "score for apart using xgboost")
 
 It's not perfect, I may have been a bit strong on the removal of the outliers on the houses. I'll have to go over it again.
+
+### 3. Making API
+
+To create the API I started from my challenge-flask-api.   
+http://tamikara.xyz:5000/status
+
+```json
+{
+  "server_status": "Alive!"
+}
+```
+
+Then I'm going to create a "predict" route with "POST" method.  
+I'll send back the requested information.
+
+- Method : POST
+- URL : /predict/
+
+### 4. Deployment
+
+I deployed everything on my VPS via docker
+
+The API : http://tamikara.xyz:5000/  
+The App : http://tamikara.xyz/immo-eliza/prediction/
+
+You can also test my API from docker(hub) using this command :
+
+```Docker
+docker run -p 5000:5000 leersma/immoeliza-api:latest
+```
