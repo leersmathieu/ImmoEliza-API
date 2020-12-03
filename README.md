@@ -2,7 +2,8 @@
 
 API for ImmoEliza Project
 
-Link to the challenge description :  [Here](https://github.com/becodeorg/CRL-Turing-4.22/blob/master/Projects/4.Prediction_api/README.md)
+Link to the challenge description :  [Here](https://github.com/becodeorg/CRL-Turing-4.22/blob/master/Projects/4.Prediction_api/README.md)  
+Link to the web part of this challenge : [Here](https://github.com/leersmathieu/ImmoEliza)  
 
 ## Objective
 This project is a collaboration between BeCode AI and the BeCode Web Dev team.
@@ -27,17 +28,18 @@ App : http://tamikara.xyz/immo-eliza/prediction/
 
 Normally, the first step would be to take a cleaned dataset and iron it to match our needs.  
 
-But we preferred to start again from the uncleaned dataset to redo the cleaning from the beginning, this time directly for our prediction model.  
-Since there are two usable raw datasets, we are going to exchange our data with another group and choose the most optimized one for our project.
+But I preferred to start again from the uncleaned dataset to redo the cleaning from the beginning, this time directly for our prediction model.  
+Since there are two usable raw datasets, i'm going to exchange my data with another group and choose the most optimized one for our project.
 
-We must therefore recover and clean the previously scrapped "ImmoCollect" dataset and compare its values with those of our colleague to then choose the most reliable one for our predictions.
+I must therefore recover and clean the previously scrapped "ImmoCollect" dataset and compare its values with those of our colleague to then choose the most reliable one for our predictions.
 
 ### 2. Prediction model
 
 Using the cleaned data it will be necessary to create a price prediction model based on the relevant features.
+
 ### 3. Making API
 
-I will certainly start from the challenge-flask-api to initialize the API it will only remain to link it to our prediction model.
+I will certainly start from the [challenge-flask-api](https://github.com/leersmathieu/challenge-flask-api)  to initialize the API it will only remain to link it to our prediction model.
 
 ### 4. Deployment
 
