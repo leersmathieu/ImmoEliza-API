@@ -1,11 +1,15 @@
 from flask import Flask, render_template, jsonify, request
 import pickle
+import pandas as pd
 import random
 import os
 
 app = Flask(__name__)
 house_model, house_scaler = pickle.load(open(f"./model_bin/house_model.p", "rb"))
 apart_model, apart_scaler = pickle.load(open(f"./model_bin/apart_model.p", "rb"))
+
+ratio_fb_convertor = pd.read_csv('./dataset/geocoding_data.csv', sep=',')
+
 
 
 @app.route('/')
@@ -24,12 +28,19 @@ def predict():
     content = request.get_json()
     if content['type_of_property'] == 0:  # House
 
+        df_converter = ratio_fb_convertor[ratio_fb_convertor['postal_code'] == content['postal_code']]
+        print(df_converter)
+        content['ratio_free_build'] = df_converter['ratio_free_build'].values[0]
+        print(type(content['ratio_free_build']))
         order = [[content['postal_code'],
                   content['number_of_bedroom'],
                   content['house_area'],
+                  content['fully_equipped_kitchen'],
                   content['terrace'],
                   content['garden'],
-                  content['is_new']]]
+                  content['number_of_facades'],
+                  content['is_new'],
+                  content['ratio_free_build']]]
         print(order)
 
         content['PREDICTION'] = int(house_model.predict(house_scaler.transform(order))[0])
@@ -37,6 +48,7 @@ def predict():
         order = [[content['postal_code'],
                   content['number_of_bedroom'],
                   content['house_area'],
+                  content['fully_equipped_kitchen'],
                   content['terrace'],
                   content['is_new']]]
         print(order)

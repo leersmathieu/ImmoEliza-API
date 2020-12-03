@@ -3,6 +3,7 @@ FROM python:3.7-slim-buster
 COPY main.py /opt/app/
 COPY model_bin/apart_model.p /opt/app/model_bin/
 COPY model_bin/house_model.p /opt/app/model_bin/
+COPY dataset/geocoding_data.csv /opt/app/dataset/
 
 COPY requirements.txt /
 
