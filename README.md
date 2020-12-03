@@ -121,7 +121,11 @@ After a lot of testing and an aberrant lack of time, I chose to use only the "mo
 
 After dividing my dataset in two I get a **score of 72** for house predictions against **score of 80** for apartment predictions using **XGBOOST** algorythme
 
-![score](./assets/score.png "score for apart using xgboost")
+Apart  
+![score](./assets/score_h.png "score for house using xgboost")
+
+House  
+![score](./assets/score_a.png "score for apart using xgboost")
 
 It's not perfect but I have very little overfitting
 
