@@ -78,17 +78,19 @@ Input : 52 0000 row
 Output : 40 000 row  
 
 No missing values !  
-More info and heatmap BY type of property [Here](data-cleaning-IC52.ipynb)
+More info and heatmap for [House](data-cleaning-IC52house.ipynb)  
+More info and heatmap for [Apartment](data-cleaning-IC52apart.ipynb)  
 
 ```
 postal_code                 int64
-type_of_property            int64
 price                       int64
 number_of_bedroom           int64
 house_area                  int64
 fully_equipped_kitchen      int64
 terrace                     int64
 garden                      int64
+number_of_facades           int64
+swimming_pool               int64
 is_new                      int64
 ```
 
@@ -117,11 +119,11 @@ _So I'm going to test different models on both datasets in parallel._
 
 After a lot of testing and an aberrant lack of time, I chose to use only the "model52" for the continuation of the hostilities.
 
-After dividing my dataset in two I get a **score of 63** for house predictions against **score of 74** for apartment predictions using **XGBOOST** algorythme
+After dividing my dataset in two I get a **score of 72** for house predictions against **score of 80** for apartment predictions using **XGBOOST** algorythme
 
 ![score](./assets/score.png "score for apart using xgboost")
 
-It's not perfect, I may have been a bit strong on the removal of the outliers on the houses. I'll have to go over it again.
+It's not perfect but I have very little overfitting
 
 ### 3. Making API
 
