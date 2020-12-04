@@ -39,6 +39,7 @@ def predict():
                   content['terrace'],
                   content['garden'],
                   content['number_of_facades'],
+                  content['swimming_pool'],
                   content['is_new'],
                   content['ratio_free_build']]]
         print(order)
